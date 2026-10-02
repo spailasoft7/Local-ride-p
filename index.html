@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LocalRide Passenger</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <div class="brand">🚐 LocalRide</div>
+      <div class="subtitle">Passenger</div>
+    </div>
+    <div class="pills">
+      <span id="gpsStatus" class="pill">GPS: waiting</span>
+      <span id="connStatus" class="pill">Connecting...</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="map-card"><div id="map"></div></section>
+
+    <section class="card">
+      <h1>Find transport</h1>
+      <div class="location-row">
+        <span>📍</span>
+        <div>
+          <strong>Your pickup</strong>
+          <div id="locationText" class="muted">Waiting for GPS...</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Available transport</h2>
+      <div id="driversList" class="empty">No available taxis right now.</div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
